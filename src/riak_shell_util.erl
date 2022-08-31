@@ -111,13 +111,12 @@ datetime() ->
 pad(X) when is_integer(X) ->
     io_lib:format("~2.10.0B", [X]).
 
- -ifdef(TEST).
- -include_lib("eunit/include/eunit.hrl").
+-ifdef(TEST).
+-include_lib("eunit/include/eunit.hrl").
 
 pretty_pr_with_unicode_test() ->
     %% 8217 is smart quotes
     Input = [8217, 65, 8217],
-    Expected = [226,128,153,65,226,128,153],
-    ?assertEqual(Expected, pretty_pr_cmd(Input)).
+    ?assertEqual(Input, pretty_pr_cmd(Input)).
 
 -endif.
