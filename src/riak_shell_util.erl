@@ -88,7 +88,7 @@ to_list(L) when is_list(L)    -> L.
 pretty_pr_cmd(Cmd) ->
     %% complex list-to-binary unicode dance to make
     %% regexs work with unicode input
-    CmdBin = unicode:characters_to_binary(Cmd),
+    CmdBin = unicode:characters_to_nfc_binary(Cmd),
     {ok, Regex1} = re:compile("(\n|[ ]+)", [unicode]),
     CmdBin2  = re:replace(CmdBin, Regex1,   " ", [global, {return, binary}]),
     {ok, Regex2} = re:compile("^ ", [unicode]),

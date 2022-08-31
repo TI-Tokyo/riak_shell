@@ -2,7 +2,7 @@
 %% ex: ts=4 sw=4 et
 {application, riak_shell,
  [
-  {description, "REPL for Riak"},
+  {description, "Riak Shell"},
   {vsn, git},
   {applications, [
                   kernel,

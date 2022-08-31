@@ -1,11 +1,4 @@
-erl_crash.dump
-ebin/
-deps/
-log/
-priv/
-.rebar/
-.eunit/
-*~
+_build/
 cmdline_lexer.erl
 cmdline_parser.erl
-deps
+rebar.lock
